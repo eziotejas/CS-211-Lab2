@@ -130,7 +130,7 @@ void mydtrsv(char UPLO, double *A, double *B, int n, int *ipiv)
         double *x = (double *) malloc(sizeof(double) * n);
         double *Atemp = (double *) malloc(sizeof(double) * n * n);
 
-        matrix_copy(Atemp, A,n, n)
+        matrix_copy(Atemp, A,n, n);
 
 
         int i, j;
