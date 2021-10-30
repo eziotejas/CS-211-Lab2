@@ -249,7 +249,7 @@ void mydtrsv(char UPLO, double *A, double *B, int n, int *ipiv)
         }
         free(y);
         free(x);
-
+        free(Atemp);
 
     return;
 }
