@@ -64,19 +64,6 @@ int test_all_lu_functions()
         naive_lu(A2, B2, n);
         t1 = get_sec();
 
-        printf("\n\n A1 is \n\n");
-        print_matrix(A1, n,n);
-        printf("\n\n A2 is \n\n");
-        print_matrix(A2, n,n);
-
-        printf("\n\n B1 is \n\n");
-        print_matrix(B1, n,1);
-
-        printf("\n\n B2 is \n\n");
-        print_matrix(B2, n, 1);
-
-
-
 
         printf("Elapsed time, naive LU: %lf seconds\n", t1 - t0);
 
