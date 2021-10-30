@@ -174,7 +174,7 @@ void mydtrsv(char UPLO, double *A, double *B, int n, int *ipiv)
 
 
                 y[0] = B[ipiv[0]];
-                printf("\n y[0] is %lf \n", y[0]);
+                printf("\n y[0] is %lf, %d \n", y[0], ipiv[0]);
 
 
 
@@ -188,7 +188,7 @@ void mydtrsv(char UPLO, double *A, double *B, int n, int *ipiv)
                         {
 
                                 printf("\n y[i] is %lf \n", y[i]);
-                                printf("\n Atemp[i*n + j]is %lf \n", Atemp[i*n + j]);
+                                printf("\n Atemp[i*n + j]is %lf, %d \n", Atemp[i*n + j], ipiv[i]);
                                 y[i] -= y[j] * Atemp[i*n + j]; 
                         }
 
