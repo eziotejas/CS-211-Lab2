@@ -1,0 +1,30 @@
+ n = 1000 
+Elapsed time, MKL LAPACK: 0.179764 seconds
+Elapsed time, naive LU: 3.897095 seconds
+my naive LU is incorrect.
+Elapsed time, block LU: 0.050692 seconds
+my block LU is incorrect.
+ n = 2000 
+Elapsed time, MKL LAPACK: 0.572898 seconds
+Elapsed time, naive LU: 31.645703 seconds
+my naive LU is incorrect.
+Elapsed time, block LU: 0.157099 seconds
+my block LU is incorrect.
+ n = 3000 
+Elapsed time, MKL LAPACK: 1.723633 seconds
+Elapsed time, naive LU: 106.291501 seconds
+my naive LU is incorrect.
+Elapsed time, block LU: 0.508594 seconds
+my block LU is incorrect.
+ n = 4000 
+Elapsed time, MKL LAPACK: 3.694423 seconds
+Elapsed time, naive LU: 253.647968 seconds
+my naive LU is incorrect.
+Elapsed time, block LU: 0.917379 seconds
+my block LU is incorrect.
+ n = 5000 
+Elapsed time, MKL LAPACK: 7.011674 seconds
+Elapsed time, naive LU: 495.975789 seconds
+my naive LU is incorrect.
+Elapsed time, block LU: 1.394462 seconds
+my block LU is incorrect.
