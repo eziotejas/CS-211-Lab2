@@ -190,6 +190,9 @@ void mydtrsv(char UPLO, double *A, double *B, int n, int *ipiv)
                                 printf("\n y[i] is %lf \n", y[i]);
                                 printf("\n Atemp[i*n + j]is %lf, %d \n", Atemp[i*n + j], ipiv[i]);
                                 y[i] -= y[j] * Atemp[i*n + j]; 
+                                printf("\n New y[i] is %lf \n", y[i]);
+
+
                         }
 
                 }
