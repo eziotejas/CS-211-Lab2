@@ -144,7 +144,7 @@ void mydtrsv(char UPLO, double *A, double *B, int n, int *ipiv)
         double temp = 0;
 
     /* add your code here */
-        if (UPLO == 'L')
+        if (UPLO == 'L') //converting A to  L here
         {
 
                 for (i = 0; i < n;i++)
@@ -190,7 +190,7 @@ void mydtrsv(char UPLO, double *A, double *B, int n, int *ipiv)
 
         }
 
-        else
+        else //converting A to  U here
         {
 
 
@@ -200,7 +200,7 @@ void mydtrsv(char UPLO, double *A, double *B, int n, int *ipiv)
                         for (j = 0; j < n;j++)
                         {
 
-                                if (j < i)
+                                if (i>j)
                                 {
                                         Atemp[i*n+j] = 0;
                                 }

@@ -8,7 +8,13 @@ void naive_lu(double *A, double *B, int n)
         ipiv[i] = i;
     }
 
+    printf("\n\n\n Before ipiv is \n\n\n");
+    print_matrix(ipiv, n, n);
     int success = mydgetrf(A, ipiv, n);
+
+
+    printf("\n\n\n After ipiv is \n\n\n");
+    print_matrix(ipiv, n, n);
 
     if (success) 
     {
