@@ -174,6 +174,9 @@ void mydtrsv(char UPLO, double *A, double *B, int n, int *ipiv)
 
 
                 y[0] = B[ipiv[0]];
+                print("\n y[0] is %lf \n", y[0]);
+
+
 
                 for (i = 1; i < n; i++)
                 {
