@@ -235,7 +235,7 @@ void mydtrsv(char UPLO, double *A, double *B, int n, int *ipiv)
 
                 x[n-1] = y[n-1] / Atemp[n*n-1] ;
 
-                for (i = n-2; i > 0; i--)
+                for (i = n-2; i >= 0; i--)
                 {
                         x[i] = y[i];
 
