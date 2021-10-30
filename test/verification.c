@@ -54,6 +54,11 @@ int test_all_lu_functions()
         if ( matrix_copy(B2, B1, n, 1) ) return -1;
         if ( matrix_copy(B3, B1, n, 1) ) return -1;
 
+
+        printf("\n\n\n Original A1 is \n\n\n");
+        print_matrix(A1, n, n);
+
+
         t0 = get_sec();    
         lapack_lu(A1, B1, n);
         t1 = get_sec();
