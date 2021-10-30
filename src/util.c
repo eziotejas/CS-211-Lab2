@@ -43,7 +43,7 @@ int randomize_matrix(double *A, const int m, const int n)
 
 	if (n>1)
 	{
-		srand(1));
+		srand(1);
 
 	}
 	else

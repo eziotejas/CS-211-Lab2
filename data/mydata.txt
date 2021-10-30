@@ -1,4 +1,27 @@
  n = 2 
-Elapsed time, MKL LAPACK: 0.001662 seconds
-Elapsed time, naive LU: 0.000006 seconds
-my naive LU is incorrect.
+Elapsed time, MKL LAPACK: 0.002242 seconds
+Elapsed time, naive LU: 0.000008 seconds
+
+
+ A1 is 
+
+[86.92, 21.62 ;
+ 0.96, -4.93 ]
+
+
+ A2 is 
+
+[86.92, 21.62 ;
+ 0.96, -4.93 ]
+
+
+ B1 is 
+
+[-1.74 ;
+ 3.50 ]
+
+
+ B2 is 
+
+[-1.74 ;
+ 3.50 ]
