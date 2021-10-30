@@ -151,10 +151,6 @@ void mydtrsv(char UPLO, double *A, double *B, int n, int *ipiv)
 
 
 
-                mydgemm(P, B, PB, n, 0, 0, 0, 0);
-
-
-
                 for (i = 0; i < n;i++)
                 {
                         for (j = 0; j < n;j++)
