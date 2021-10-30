@@ -190,7 +190,7 @@ void mydtrsv(char UPLO, double *A, double *B, int n, int *ipiv)
                 }
 
 
-                for (i = 1; i < n; i++)
+                for (i = 0; i < n; i++)
                 {
                        B[i] = y[i];
                 }
