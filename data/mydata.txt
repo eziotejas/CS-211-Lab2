@@ -1,5 +1,77 @@
  n = 4 
-Elapsed time, MKL LAPACK: 0.002030 seconds
-Elapsed time, naive LU: 0.000013 seconds
-Elapsed time, block LU: 0.000003 seconds
-my block LU is incorrect.
+Elapsed time, MKL LAPACK: 0.002323 seconds
+
+ B 
+[27.42 ;
+-102.16 ;
+-81.43 ;
+35.64 ]
+
+ Atemp[i*n + j]is 21.255850, x[j] is 0.322842 
+
+ Pre x[i] is -81.432501 
+
+ Post x[i] is -88.294791 
+
+ Atemp[i*n + j]is 92.877338, x[j] is -1.167809 
+
+ Pre x[i] is -102.159570 
+
+ Post x[i] is 6.303446 
+
+ Atemp[i*n + j]is 105.444350, x[j] is 0.322842 
+
+ Pre x[i] is 6.303446 
+
+ Post x[i] is -27.738463 
+
+ Atemp[i*n + j]is 42.290000, x[j] is 0.411871 
+
+ Pre x[i] is 27.420000 
+
+ Post x[i] is 10.001996 
+
+ Atemp[i*n + j]is -21.190000, x[j] is -1.167809 
+
+ Pre x[i] is 10.001996 
+
+ Post x[i] is -14.743883 
+
+ Atemp[i*n + j]is -37.980000, x[j] is 0.322842 
+
+ Pre x[i] is -14.743883 
+
+ Post x[i] is -2.482328 
+Elapsed time, naive LU: 0.000067 seconds
+
+
+ A1 is 
+
+[93.56, 42.29, -21.19, -37.98 ;
+ 0.97, -67.35, 92.88, 105.44 ;
+ 0.90,  0.33, 75.61, 21.26 ;
+-0.88, -0.90,  0.48, 110.38 ]
+
+
+ A2 is 
+
+[93.56, 42.29, -21.19, -37.98 ;
+ 0.97, -67.35, 92.88, 105.44 ;
+ 0.90,  0.33, 75.61, 21.26 ;
+-0.88, -0.90,  0.48, 110.38 ]
+
+
+ B1 is 
+
+[-0.03 ;
+ 0.41 ;
+-1.17 ;
+ 0.32 ]
+
+
+ B2 is 
+
+[-0.03 ;
+ 0.41 ;
+-1.17 ;
+ 0.32 ]

@@ -9,7 +9,7 @@ make
 cd ../
 
 cd script
-sh submit.sh
+sh submitT.sh
 cd ../
 
 cat data/mydata.txt
