@@ -124,8 +124,8 @@ int mydgetrf(double *A, int *ipiv, int n)
 void mydtrsv(char UPLO, double *A, double *B, int n, int *ipiv)
 {
 
-        y = (double *) malloc(sizeof(double) * n);
-        x = (double *) malloc(sizeof(double) * n);
+        double *y = (double *) malloc(sizeof(double) * n);
+        double *x = (double *) malloc(sizeof(double) * n);
 
         int i, j;
         double temp = 0;
