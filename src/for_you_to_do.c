@@ -205,7 +205,7 @@ void mydtrsv(char UPLO, double *A, double *B, int n, int *ipiv)
 
         }
 
-        else //converting A to  U here
+        else if (UPLO == 'U') //converting A to  U here
         {
 
 
