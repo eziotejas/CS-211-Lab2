@@ -80,8 +80,8 @@ int test_all_lu_functions()
         if (verify_matrix(A1, A2, n, n) )
             printf("\n\n\nTejas my naive LU A part is correct.\n\n\n");
 
-        if (verify_matrix(A1, A2, n, n) || verify_matrix(B1, B2, n, 1))
-            printf("my naive LU is incorrect.\n");
+        // if (verify_matrix(A1, A2, n, n) || verify_matrix(B1, B2, n, 1))
+        //     printf("my naive LU is incorrect.\n");
 
         t0 = get_sec();    
         block_lu(A3, B3, n,  block_size);
