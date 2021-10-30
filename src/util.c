@@ -110,7 +110,6 @@ int verify_matrix(const double *C, const double *D, const int m, const int n)
         if (diff > 1e-3) 
 		{
 
-			printf("\n\n\n diff is %lf, %i, C[i],  %lf, D[i], %lf ", diff, i, C[i], D[i]);
 			break;
 		}
 	}
@@ -121,7 +120,7 @@ int verify_matrix(const double *C, const double *D, const int m, const int n)
     }
     else
     {
-        return 1;
+        return 0;
     }
     
 }
