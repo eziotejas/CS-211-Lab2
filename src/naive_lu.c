@@ -19,20 +19,20 @@ void naive_lu(double *A, double *B, int n)
     mydtrsv('L', A, B, n, ipiv);
 
 
-    // printf("\n\n\n After forward substitution A is \n\n\n");
-    // print_matrix(A, n, n);
+    printf("\n\n\n After forward substitution A is \n\n\n");
+    print_matrix(A, n, n);
 
-    // printf("\n\n After forward substitution, B is \n\n");
+    printf("\n\n After forward substitution, B is \n\n");
 
-    // print_matrix(B, n, 1);
+    print_matrix(B, n, 1);
 
     mydtrsv('U', A, B, n, ipiv);
 
-    // printf("\n\n\n After backward substitution, A is \n\n\n");
-    // print_matrix(A, n, n);
+    printf("\n\n\n After backward substitution, A is \n\n\n");
+    print_matrix(A, n, n);
 
-    // printf("\n\n After backward substitution, B is \n\n");
+    printf("\n\n After backward substitution, B is \n\n");
 
-    // print_matrix(B, n, 1);
+    print_matrix(B, n, 1);
 
 }
