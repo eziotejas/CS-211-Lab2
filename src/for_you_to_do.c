@@ -179,7 +179,7 @@ void mydtrsv(char UPLO, double *A, double *B, int n, int *ipiv)
                 {
                         y[i] = B[ipiv[i]];
 
-                        for (j = 1; j < i; j++) 
+                        for (j = 0; j < i; j++) 
                         {
                                 y[i] -= y[j] * Atemp[i*n + j]; 
                         }
