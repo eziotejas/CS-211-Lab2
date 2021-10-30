@@ -9,12 +9,16 @@ void naive_lu(double *A, double *B, int n)
     }
 
     printf("\n\n\n Before ipiv is \n\n\n");
-    print_matrix(ipiv, n, n);
+    for (i = 0; i < n; i++) {
+        printf(" %d, ", ipiv[i]);
+    }
     int success = mydgetrf(A, ipiv, n);
 
 
     printf("\n\n\n After ipiv is \n\n\n");
-    print_matrix(ipiv, n, n);
+    for (i = 0; i < n; i++) {
+        printf(" %d, ", ipiv[i]);
+    }
 
     if (success) 
     {
