@@ -128,6 +128,10 @@ void mydtrsv(char UPLO, double *A, double *B, int n, int *ipiv)
 
         double *y = (double *) malloc(sizeof(double) * n);
         double *x = (double *) malloc(sizeof(double) * n);
+        double *Atemp = (double *) malloc(sizeof(double) * n * n);
+
+        matrix_copy(Atemp, A,n, n)
+
 
         int i, j;
         double temp = 0;
@@ -135,6 +139,29 @@ void mydtrsv(char UPLO, double *A, double *B, int n, int *ipiv)
     /* add your code here */
         if (UPLO == 'L')
         {
+
+                for (i = 0; i < n;i++)
+                {
+                        for (j = 0; j < n;j++)
+                        {
+
+                                if (j > i)
+                                {
+                                        Atemp[i*n+j] = 0;
+                                }
+
+                        }
+
+                }
+
+
+                for (i = 0; i < n;i++)
+                {
+                        Atemp[i*n+i] = 1;
+
+                }
+
+
                 y[0] = B[ipiv[0]];
 
                 for (i = 1; i < n; i++)
@@ -143,7 +170,7 @@ void mydtrsv(char UPLO, double *A, double *B, int n, int *ipiv)
 
                         for (j = 1; j < i; j++) 
                         {
-                                y[i] -= y[j] * A[i*n + j]; 
+                                y[i] -= y[j] * Atemp[i*n + j]; 
                         }
 
                 }
@@ -158,13 +185,30 @@ void mydtrsv(char UPLO, double *A, double *B, int n, int *ipiv)
 
         else
         {
+
+
+
+                for (i = 0; i < n;i++)
+                {
+                        for (j = 0; j < n;j++)
+                        {
+
+                                if (j < i)
+                                {
+                                        Atemp[i*n+j] = 0;
+                                }
+
+                        }
+
+                }
+
                 
                 for (i = 1; i < n; i++)
                 {
                        y[i] = B[i];
                 }
 
-                x[n-1] = y[n-1] / A[n*n-1] ;
+                x[n-1] = y[n-1] / Atemp[n*n-1] ;
 
                 for (i = n-2; i > 0; i--)
                 {
@@ -172,7 +216,7 @@ void mydtrsv(char UPLO, double *A, double *B, int n, int *ipiv)
 
                         for (j = i+1; j < n; j++) 
                         {
-                                x[i] -= (x[j] * A[i*n + j] )/ A[i*n+i] ; 
+                                x[i] -= (x[j] * Atemp[i*n + j] )/ Atemp[i*n+i] ; 
                         }
                 }
 
