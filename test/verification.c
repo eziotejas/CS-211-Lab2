@@ -23,7 +23,7 @@
 int test_all_lu_functions()
 {
     int block_size=get_block_size();
-    int ni, nList[] = {2};
+    int ni, nList[] = {4};
     for (ni = 0; ni < sizeof(nList) / sizeof(nList[0]); ni++) {
         int n = nList[ni], i, j;
 
@@ -64,16 +64,16 @@ int test_all_lu_functions()
         t1 = get_sec();
         printf("Elapsed time, naive LU: %lf seconds\n", t1 - t0);
 
-        printf("A1 is \n\n\n");
+        printf("\n\n\n A1 is \n\n\n");
         print_matrix(A1, n, n);
 
-        printf("A2 is \n\n\n");
+        printf("\n\n\n A2 is \n\n\n");
         print_matrix(A2, n, n);
 
-        printf("B1 is \n\n\n");
+        printf("\n\n\n B1 is \n\n\n");
         print_matrix(B1, n, 1);
 
-        printf("B2 is \n\n\n");
+        printf("\n\n\n B2 is \n\n\n");
         print_matrix(B2, n, 1);
 
 
