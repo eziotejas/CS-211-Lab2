@@ -126,13 +126,6 @@ int mydgetrf(double *A, int *ipiv, int n)
 void mydtrsv(char UPLO, double *A, double *B, int n, int *ipiv)
 {
 
-        printf("\n\n\n CHECKING mydtrsv,A with TYPE= %c \n\n\n", UPLO);
-        print_matrix(A, n, n);
-
-        printf("\n\n\n CHECKING mydtrsv,B with TYPE= %c \n\n\n", UPLO);
-        print_matrix(B, n, 1);
-
-
         double *y = (double *) malloc(sizeof(double) * n);
         double *x = (double *) malloc(sizeof(double) * n);
 
@@ -174,7 +167,6 @@ void mydtrsv(char UPLO, double *A, double *B, int n, int *ipiv)
 
 
                 y[0] = B[ipiv[0]];
-                printf("\n y[0] is %lf, %d \n", y[0], ipiv[0]);
 
 
 
@@ -187,10 +179,7 @@ void mydtrsv(char UPLO, double *A, double *B, int n, int *ipiv)
                         for (j = 0; j < i; j++) 
                         {
 
-                                printf("\n y[i] is %lf \n", y[i]);
-                                printf("\n Atemp[i*n + j]is %lf, %d \n", Atemp[i*n + j], ipiv[i]);
                                 y[i] -= y[j] * Atemp[i*n + j]; 
-                                printf("\n New y[i] is %lf \n", y[i]);
 
 
                         }
