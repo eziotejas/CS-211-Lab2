@@ -241,6 +241,8 @@ void mydtrsv(char UPLO, double *A, double *B, int n, int *ipiv)
 
                         for (j = i+1; j < n; j++) 
                         {
+                                printf("\n Atemp[i*n + j]is %lf, x[j] is %lf \n", Atemp[i*n + j], x[j] );
+
                                 x[i] -= (x[j] * Atemp[i*n + j] )/ Atemp[i*n+i] ; 
                         }
                 }
