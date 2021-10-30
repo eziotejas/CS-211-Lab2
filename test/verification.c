@@ -76,6 +76,10 @@ int test_all_lu_functions()
         printf("\n\n\n B2 is \n\n\n");
         print_matrix(B2, n, 1);
 
+
+        printf("\n\n\n CHECKING A1 is \n\n\n");
+        print_matrix(A1, n, n);
+
         if (verify_matrix(A1, A2, n, n) )
             printf("\n\n\nTejas my naive LU A part is correct.\n\n\n");
 
