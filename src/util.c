@@ -96,11 +96,10 @@ int verify_matrix(const double *C, const double *D, const int m, const int n)
 	double diff;
 
 	printf("\n\n\n CHECKING A1 inside Verify Matrix is \n\n\n");
-
-	printf("\n\n\n CHECKING A1 inside Verify Matrix is \n\n\n");
-
-	
 	print_matrix(C, n, n);
+
+	printf("\n\n\n CHECKING A2 inside Verify Matrix is \n\n\n");
+	print_matrix(D, n, n);
 
 	for (i = 0; i < m * n; i++)
 	{
