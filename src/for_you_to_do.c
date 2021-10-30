@@ -220,7 +220,8 @@ void mydtrsv(char UPLO, double *A, double *B, int n, int *ipiv)
                        y[i] = B[i];
                 }
 
-                // printf("\n Atemp[n*n-1]is %lf \n", Atemp[n*n-1]);
+                printf("\n B \n");
+                print_matrix(B,n,1);
 
 
                 x[n-1] = y[n-1] / Atemp[n*n-1] ;
