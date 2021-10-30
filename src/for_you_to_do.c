@@ -130,11 +130,13 @@ void mydtrsv(char UPLO, double *A, double *B, int n, int *ipiv)
         print_matrix(A, n, n);
 
         printf("\n\n\n CHECKING mydtrsv,B with TYPE= %c \n\n\n", UPLO);
-        print_matrix(B, n, n);
+        print_matrix(B, n, 1);
 
 
         double *y = (double *) malloc(sizeof(double) * n);
         double *x = (double *) malloc(sizeof(double) * n);
+
+
         double *Atemp = (double *) malloc(sizeof(double) * n * n);
 
         matrix_copy(Atemp, A,n, n);
@@ -146,6 +148,12 @@ void mydtrsv(char UPLO, double *A, double *B, int n, int *ipiv)
     /* add your code here */
         if (UPLO == 'L') //converting A to  L here
         {
+
+
+
+                mydgemm(P, B, PB, n, 0, 0, 0, 0);
+
+
 
                 for (i = 0; i < n;i++)
                 {
@@ -252,7 +260,19 @@ void mydgemm(double *A, double *B, double *C, int n, int i, int j, int k, int b)
     /* add your code here */
     /* please just copy from your lab1 function optimal( ... ) */
 
+        int x,y,z;
+        for (x = 0; x < n; x++)
+        {
+                for (y = 0; y < n; y++)
+                {
+                        C[x*n+y] = 0;
 
+                        for (z= 0; z < n; z++)
+                        {
+                                C[x*n+y] += A[x*n+z] * B[z*n + y];
+                        }
+                }
+        }
 
 
 
