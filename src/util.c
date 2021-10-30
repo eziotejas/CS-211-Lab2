@@ -115,7 +115,7 @@ int verify_matrix(const double *C, const double *D, const int m, const int n)
     }
     else
     {
-        return 0;
+        return 1;
     }
     
 }
