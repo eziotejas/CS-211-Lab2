@@ -66,16 +66,16 @@ int test_all_lu_functions()
 
 
 
-        //printf("\n\n A1 is \n\n");
-        //print_matrix(A1, n,n);
-        //printf("\n\n A2 is \n\n");
-        //print_matrix(A2, n,n);
+        printf("\n\n A1 is \n\n");
+        print_matrix(A1, n,n);
+        printf("\n\n A2 is \n\n");
+        print_matrix(A2, n,n);
 
-        //printf("\n\n B1 is \n\n");
-        //print_matrix(B1, n,1);
+        printf("\n\n B1 is \n\n");
+        print_matrix(B1, n,1);
 
-        //printf("\n\n B2 is \n\n");
-        //print_matrix(B2, n, 1);
+        printf("\n\n B2 is \n\n");
+        print_matrix(B2, n, 1);
 
 
 

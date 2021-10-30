@@ -40,7 +40,17 @@ int print_matrix(const double *A, const int m, const int n)
 
 int randomize_matrix(double *A, const int m, const int n)
 {
-	srand(time(NULL));
+
+	if (n>1)
+	{
+		srand(1));
+
+	}
+	else
+	{
+		srand(2);
+
+	}
 
 
 	int i, j;
