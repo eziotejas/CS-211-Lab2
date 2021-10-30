@@ -104,17 +104,6 @@ int verify_matrix(const double *C, const double *D, const int m, const int n)
 	int i;
 	double diff;
 
-	if (n <= 1)
-	{
-		printf("\n\n\n CHECKING A1 inside Verify Matrix is \n\n\n");
-		print_matrix(C, n, 1);
-
-		printf("\n\n\n CHECKING A2 inside Verify Matrix is \n\n\n");
-		print_matrix(D, n, 1);
-	}
-
-
-
 	for (i = 0; i < m * n; i++)
 	{
 		diff = fabs(C[i] - D[i]);

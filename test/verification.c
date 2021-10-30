@@ -55,13 +55,6 @@ int test_all_lu_functions()
         if ( matrix_copy(B3, B1, n, 1) ) return -1;
 
 
-        printf("\n\n\n Original A1 is \n\n\n");
-        print_matrix(A1, n, n);
-
-        printf("\n\n\n Original B1 is \n\n\n");
-        print_matrix(B1, n, 1);
-
-
         t0 = get_sec();    
         lapack_lu(A1, B1, n);
         t1 = get_sec();
@@ -85,14 +78,25 @@ int test_all_lu_functions()
         print_matrix(B2, n, 1);
 
 
-        // if (verify_matrix(A1, A2, n, n) )
-        //     printf("\n\n\nTejas my naive LU A part is correct.\n\n\n");
+        if (verify_matrix(A1, A2, n, n) )
+            printf("\n\n\nTejas my naive LU A part is correct.\n\n\n");
+        else
+        {
+            printf("\n\n\nTejas my naive LU A part is wrong.\n\n\n");
+
+        }
 
 
+        if (verify_matrix(B1, B2, n, 1) )
+            printf("\n\n\nTejas my naive LU B part is correct.\n\n\n");
+        else
+        {
+            printf("\n\n\nTejas my naive LU B part is wrong.\n\n\n");
 
+        }
 
-        if (verify_matrix(A1, A2, n, n) || verify_matrix(B1, B2, n, 1))
-            printf("my naive LU is incorrect.\n");
+        // if (verify_matrix(A1, A2, n, n) || verify_matrix(B1, B2, n, 1))
+        //     printf("my naive LU is incorrect.\n");
 
         t0 = get_sec();    
         block_lu(A3, B3, n,  block_size);
