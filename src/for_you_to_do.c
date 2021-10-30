@@ -229,7 +229,7 @@ void mydtrsv(char UPLO, double *A, double *B, int n, int *ipiv)
                 {
                         x[i] = y[i];
 
-                        for (j = i+1; j >=0; j--) 
+                        for (j = i+1; j >0; j--) 
                         {
                                 printf("\n Atemp[i*n + j]is %lf, x[j] is %lf \n", Atemp[i*n + j], x[j] );
                                 printf("\n Pre x[i] is %lf \n",x[i] );
