@@ -58,6 +58,9 @@ int test_all_lu_functions()
         printf("\n\n\n Original A1 is \n\n\n");
         print_matrix(A1, n, n);
 
+        printf("\n\n\n Original B1 is \n\n\n");
+        print_matrix(B1, n, 1);
+
 
         t0 = get_sec();    
         lapack_lu(A1, B1, n);
